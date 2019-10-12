@@ -6,5 +6,6 @@ def search_engine():
     return render_template( 'index.html' )
 
 
-if __name__ == '__main__':
-    app.run()
+# for development
+# if __name__ == '__main__':
+#     app.run( debug=True )

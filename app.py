@@ -1,4 +1,6 @@
 from flask import Flask, render_template, url_for
+from search-engine import tokenize
+
 app = Flask( __name__ )
 
 @app.route('/')

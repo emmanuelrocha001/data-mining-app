@@ -6,12 +6,12 @@ free from search on a dataset of 44,506 documens( search is done on plot overvie
 https://www.kaggle.com/rounakbanik/the-movies-dataset
 
 
-### Dependancies: <br/>
+### Dependancies:
 csv, nltk, numpy, json, flask, pandas
 (requires Python 3.7 )
 
 ### How to run:
-python app.py <br/>
+python app.py <br/> <br/>
 ( runs on localhost:5000 or localhost:5000/search )
 
 TFIDF Calculation

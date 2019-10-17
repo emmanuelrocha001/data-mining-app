@@ -1,7 +1,7 @@
 # search-engine
 
 
-free from search on a dataset of 44,506 documens( search is done on plot overviews )
+free from search on a dataset of 44,506 documents( search is done on plot overviews )
 ### Dataset:
 https://www.kaggle.com/rounakbanik/the-movies-dataset
 
@@ -14,7 +14,7 @@ csv, nltk, numpy, json, flask, pandas
 python app.py <br/> <br/>
 ( runs on localhost:5000 or localhost:5000/search )
 
-TFIDF Calculation
+### TFIDF Calculation
 Term Frequency(TF) * Inverse Document Frequency (IDF) = TF-IDF
 
 t = term (word)
@@ -31,4 +31,4 @@ IDF = log(N/(DF +1))
 
 TF-IDF = TF * IDF
 
-Challenges
+### Challenges

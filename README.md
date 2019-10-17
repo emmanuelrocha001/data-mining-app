@@ -15,6 +15,10 @@ python app.py <br/> <br/>
 ( runs on localhost:5000 or localhost:5000/search )
 
 ### TFIDF Calculation
+
+#### TF(t):
+(Number of times term t appears in a document) / (Total number of terms in the document)
+
 Term Frequency(TF) * Inverse Document Frequency (IDF) = TF-IDF
 
 t = term (word)

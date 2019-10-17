@@ -19,6 +19,7 @@ class TokenData:
 
     def updatePostingList( self, doc_id, index ):
         if doc_id not in self._posting_list.keys():
+            
             self._posting_list.update( { doc_id: [index] } )
         else:
             self._posting_list[ doc_id ].append( index )

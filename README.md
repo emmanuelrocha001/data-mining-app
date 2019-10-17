@@ -18,7 +18,7 @@ python app.py <br/> <br/>
 
 #### Term frequency
 __TF(t):__ ( Number of times term t appears in a document ) / ( Total number of terms in the document )
-### Inverse Document Frequency
+#### Inverse Document Frequency
 __IDF(t):__ LOG ( Total number of documents / Number of documents with term t in it ).
 
 t = term (word)

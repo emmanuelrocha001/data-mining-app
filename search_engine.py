@@ -36,7 +36,11 @@ def generateQuery( raw_query ):
     # tokenize
     tokens = tokenizer.tokenize( raw_query )
     # stop words to be filtered
-    stop_words = set(stopwords.words('english'))
+    # stop_words = set(stopwords.words('english'))
+    #manually set stop words
+    stop_words = set(['whom', 'that', 'those', "needn't", 'where', 'has', 'same', 'had', 'we', 'my', 'hers', 'does', 'they', 'the', 'only', "doesn't", 'be', 'mightn', 'her', 'wasn', 'being', 'am', 'but', 'themselves', 'during', "don't", 'into', 'its', 'isn', 'of', 'won', 'few', 'as', 'own', 'more', "shouldn't", 'myself', "mightn't", 'after', 'below', "didn't", "you've", 'wouldn', 'any', 'his', 'in', 'hasn', "weren't", 'him', 'she', 'will', "won't", 'it', 'y', 'he', 'now', 'such', 'haven', 'most', 'who', 'an', 'shan', 'at', "she's", 'were', 'weren', 'do', 'did', 've', 'all', 'between', 'above', "you're", 'no', "you'll", 'which', 'i',
+'been', 'doesn', "hasn't", 'each', 'some', 'don', "aren't", 'should', 'mustn', 'our', "wouldn't", 'their', 'your', 'yours', 'doing', 'why', "hadn't", 'down', 'so', 'for', 'while', 'this', "shan't", 'there', 'needn', 'up', 'shouldn', 'by', "mustn't", 'have', 'yourself', "you'd", 'd', "haven't", 'about', 'ain', 'or', 'ourselves', 'when', "couldn't", 'is', 'with', "that'll", 'these', 'further', "should've", 'if', 'than', 'just', "wasn't", 'other', "isn't", 'you',
+'then', 'how', 'too', 'until', 'very', 'are', 'to', 'itself', 'aren', 't', 'a', 'before', 'm', 'can', 'out', 'and', 'under', 'here', 'o', 'on', 'theirs', 'ma', 'couldn', 'having', 'himself', 'against', 'again', 'll', 'nor', 'hadn', 'ours', 'through', 'both', 'because', 'what', 's', 'them', 'not', 'off', 'me', "it's", 'once', 'over', 'didn', 'was', 're', 'from', 'yourselves', 'herself'])
 
     # processed query
     query = []

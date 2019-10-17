@@ -1,7 +1,7 @@
 # search-engine
 
 
-free from search on a dataset of 44,506 documents( search is done on plot overviews )
+free form search on a dataset of 44,506 documents( search is done on plot overviews )
 ### Dataset:
 https://www.kaggle.com/rounakbanik/the-movies-dataset
 

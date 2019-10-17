@@ -22,7 +22,13 @@ python app.py <br/> <br/>
   __[3]:__ filter out stop-words <br/>
 
 ### Posting Lists
-  dataset tokens are processed and a json file is generated with the following data format: <br\>
+  dataset tokens are processed and a json file is generated with the following data format: <br/>
+  { 
+    "tokens" : [
+    
+     
+    ]
+  }
 
 ## Document Ranking
 

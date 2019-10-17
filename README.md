@@ -1,8 +1,8 @@
 # search-engine
 
 
-Movie search, search plot overviews.\n
-dataset:\n
+Movie search, search plot overviews. <br/>
+dataset: <br/>
 https://www.kaggle.com/rounakbanik/the-movies-dataset
 
 

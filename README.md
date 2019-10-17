@@ -23,6 +23,7 @@ __IDF(t):__ log ( Total number of documents / Number of documents with term t in
 #### Term frequenct-Inverse document frequency
 __TF-IDF(t):__ tf(t) x idf(t)
 #### Overall document score
+__Score:__  sum of the tf-idf for each term in the query
 
 t = term (word)
 

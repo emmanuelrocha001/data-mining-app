@@ -6,7 +6,10 @@ dataset: <br/>
 https://www.kaggle.com/rounakbanik/the-movies-dataset
 
 
-required dependancies: csv, nltk, numpy, json, flask, pandas
+dependancies: <br/>
+csv, nltk, numpy, json, flask, pandas
+
+environment: <br/>
 Python 3.7
 
 To Run

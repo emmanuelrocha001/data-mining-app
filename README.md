@@ -17,9 +17,9 @@ python app.py <br/> <br/>
 
 ## Dataset pre-processing
 ### Tokenization
-  __[1]:__ change casing to lowercase
-  __[2]:__ remove punctuation
-  __[3]:__ filter out stop-words
+  __[1]:__ change casing to lowercase <br\>
+  __[2]:__ remove punctuation <br\>
+  __[3]:__ filter out stop-words <br\>
 
 ### Posting Lists
   

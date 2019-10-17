@@ -6,7 +6,7 @@ free form search on a dataset of 44,506 documents( search is done on plot overvi
 https://www.kaggle.com/rounakbanik/the-movies-dataset
 
 
-## Dependancies:
+## Dependencies:
 csv, nltk, numpy, json, flask, pandas
 (requires Python 3.7 )
 
@@ -28,4 +28,4 @@ __TF-IDF(t):__ tf(t) x idf(t)
 #### Overall document score
 __Score:__  sum of the tf-idf for each term in the query
 
-### Challenges
+## Challenges

@@ -16,8 +16,8 @@ python app.py <br/> <br/>
 
 ### TFIDF Calculation
 
-#### TF(t):
-(Number of times term t appears in a document) / (Total number of terms in the document)
+#### Term frequency
+__TF(t):__ (Number of times term t appears in a document) / (Total number of terms in the document)
 
 Term Frequency(TF) * Inverse Document Frequency (IDF) = TF-IDF
 

@@ -14,14 +14,15 @@ csv, nltk, numpy, json, flask, pandas
 python app.py <br/> <br/>
 ( runs on localhost:5000 or localhost:5000/search )
 
-### TF-IDF Calculation
+### Score Calculation
 
 #### Term frequency
 __TF(t):__ ( Number of times term t appears in a document ) / ( Total number of terms in the document )
 #### Inverse Document Frequency
 __IDF(t):__ log ( Total number of documents / Number of documents with term t in it ).
 #### Term frequenct-Inverse document frequency
-__TF-IDF(t):__ tf(t)xidf(t)
+__TF-IDF(t):__ tf(t) x idf(t)
+#### Overall document score
 
 t = term (word)
 

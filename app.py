@@ -19,8 +19,8 @@ def search( q ):
     return render_template( 'results.html', result_data = result)
 
 
-# for development
-if __name__ == '__main__':
-    # app.jinja_env.auto_reload = True
-    # app.config['TEMPLATES_AUTO_RELOAD'] = True
-    app.run(debug=True, use_reloader=True)
+# # for development
+# if __name__ == '__main__':
+#     # app.jinja_env.auto_reload = True
+#     # app.config['TEMPLATES_AUTO_RELOAD'] = True
+#     app.run(debug=True, use_reloader=True)

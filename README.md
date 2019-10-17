@@ -23,12 +23,14 @@ python app.py <br/> <br/>
 
 ### Posting Lists
  dataset tokens are processed and a json file is generated with the following data format: <br/>
- /{ <br/>
-    "tokens" : /[
-    
+ { <br/>
+    "tokens" : [
+          document_id : {
+          
+          }
      
-    /]
- /}
+    ]
+ }
 
 ## Document Ranking
 

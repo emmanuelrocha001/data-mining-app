@@ -1,4 +1,4 @@
-# search-engine
+# Movie Search Engine
 
 
 free form search on a dataset of 44,506 documents( search is done on plot overviews )

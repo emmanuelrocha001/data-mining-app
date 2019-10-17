@@ -2,19 +2,18 @@
 
 
 Movie search, search plot overviews. <br/> <br/>
-__dataset__: <br/>
+### dataset:
 https://www.kaggle.com/rounakbanik/the-movies-dataset
 
 
-__dependancies__: <br/>
+### dependancies: <br/>
 csv, nltk, numpy, json, flask, pandas
 
-__environment__: <br/>
+### environment: <br/>
 Python 3.7
 
-To Run
-run: python app.py
-
+### how to run
+run: python app.py <br/>
 runs on localhost:5000 or localhost:5000/search
 
 TFIDF Calculation

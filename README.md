@@ -14,6 +14,9 @@ csv, nltk, numpy, json, flask, pandas
 python app.py <br/> <br/>
 ( runs on localhost:5000 or localhost:5000/search )
 
+
+## Dataset pre-processing
+
 ### Document Ranking
 
 #### Term frequency
@@ -24,19 +27,5 @@ __IDF(t):__ log ( Total number of documents / Number of documents with term t in
 __TF-IDF(t):__ tf(t) x idf(t)
 #### Overall document score
 __Score:__  sum of the tf-idf for each term in the query
-
-t = term (word)
-
-d = document (set of words)
-
-N = count of docs
-
-TF = count of t in d / num words in d
-
-DF = occurence of t in documents
-
-IDF = log(N/(DF +1))
-
-TF-IDF = TF * IDF
 
 ### Challenges

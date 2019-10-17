@@ -1,7 +1,7 @@
 # search-engine
 
 
-Movie search, search plot overviews. <br/> <br/>
+free from search on a dataset of 44,506 documens( search is done on plot overviews )
 ### dataset:
 https://www.kaggle.com/rounakbanik/the-movies-dataset
 

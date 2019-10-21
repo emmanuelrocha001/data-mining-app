@@ -10,7 +10,10 @@ https://www.kaggle.com/rounakbanik/the-movies-dataset
 csv, nltk, numpy, json, flask, pandas
 (requires Python 3.7 )
 
-## How to run:
+## search url
+http://emmanuelrocha001.pythonanywhere.com/search/
+
+## How to run locally:
 python app.py <br/> <br/>
 ( runs on localhost:5000 or localhost:5000/search )
 

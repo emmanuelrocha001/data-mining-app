@@ -29,7 +29,38 @@
                     <img src="" class='poster_image'>
                     <h2> {{ result.title }} </h2>
                     <p class='overview'> {{ result.overview }} </p>
-                    <h3> tf-idf: {{ result.score }} </h3>
+                    <h2>Document ranking calculations</h2>
+                    <table>
+                        <tr>
+                          <th></th>
+                          {% for term in result.tf.keys() %}
+                          <th>{{ term }}</th>
+                          {% endfor %}
+                        </tr>
+                        <tr>
+                          <th>tf</th>
+                          {% for val in result.tf.values() %}
+                          <th>{{ val }}</th>
+                          {% endfor %}
+                        </tr>
+                        <tr>
+                            <th>idf</th>
+                            {% for term in result.tf.keys() %}
+                            <th> {{ result_data.idf[ term ] }} </th>
+                            {% endfor %}
+
+                        </tr>
+
+                        <tr>
+                            <th>tf-idf</th>
+                            {% for term in result.tf.keys() %}
+                                <th> {{ result.tf_idf[ term ] }} </th>
+                            {% endfor %}
+
+                        </tr>
+
+                    </table>
+                    <h3> score: {{ result.score }} </h3>
                 </div>
 
             {% endfor %}

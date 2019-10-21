@@ -8,6 +8,7 @@ app = Flask( __name__ )
 def main():
     # test = query('war machines')
     # print(test)
+
     return render_template( 'index.html')
     # print( request.form['search-box'] )
 

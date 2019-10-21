@@ -14,46 +14,70 @@
 </head>
 <body>
 
-    <div class='page-container'>
-        <title>Movie Search</title>
-        <div id='title-holder' >
-            <h1>Results</h1>
-        </div>
-
+    <title>Movie Search</title>
+    <div id='title-holder' >
+        <h1>Top Results</h1>
+    </div>
+    <div class='results'>
         <p id='query-results'> total documents: {{ result_data.documents }} <br> {{ result_data.results }} results ( {{ result_data.time }} seconds )<p>
-        <div id='results-holder'>
-            {% block content %}
+        <div class='cen'>
+
+            <!-- {% block content %} -->
             {% for result in result_data.top_ten %}
-                <p id='result-title'> {{ result.title }}  <br></p>
-                <!-- <p> {{ result.overview }} <br><br> </p> -->
+                <div class='result'>
+
+                    <h2> {{ result.title }} </h2>
+                    <p class='overview'> {{ result.overview }} </p>
+                    <h3> tf-idf: {{ result.score }} </h3>
+                </div>
 
             {% endfor %}
-            {% endblock content %}
+            <!-- {% endblock content %} -->
+
+
         </div>
-        <!-- <div class="search-box">
-            <input class="search-txt" type="text" name="" placeholder="Search">
-            <a class="search-btn" href="">
-                <i class="fas fa-search fa"></i>
-            </a>
 
-        </div> -->
+    </div>
 
-            <!-- <form method="POST" action="">
-                <input type="text" name="username">
-                <input type="submit" value="Send"> -->
-            <!-- <p>{{ test_thing }}</p> -->
-
-        <div class='link-box'>
-            <a class='repo-link' href="https://github.com/emmanuelrocha001/book-recommender">
+    <div class='link-box'>
+            <a class='repo-link' href="https://github.com/emmanuelrocha001/data-mining-app">
                 <i id='github-icon' class="fab fa-github-alt fa-4x"></i>
             </a>
             <div class='author-text'>
                     <p> Developed by Emmanuel Rocha</p>
             </div>
-        </div>
     </div>
-    <!-- <script defer src='./external-libraries/natural/index.js'></script> -->
+
     <script type=text/javascript src="{{ url_for('static', filename='js/font-awesome.js') }}"></script>
+    <script type=text/javascript src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+    <script>
+            query_terms = '{{ result_data.query_terms }}'.split(' ');
+
+            results_overview = document.getElementsByClassName('overview');
+            for( i=0; i < results_overview.length; i++) {
+                var paragraph = results_overview[i].innerHTML;
+
+                for( var j=0; j < query_terms.length; j++) {
+                    if( query_terms[j] != '' ) {
+                        var regEx = new RegExp(query_terms[j], "ig");
+                        // var replaceMask = '<mark>' + query_terms[j] + '</mark>';
+
+                        paragraph = paragraph.replace(regEx, ( match) => {
+                            return '<mark>' + match + '</mark>'
+                        });
+                    }
+                }
+
+                // paragraph = paragraph.replace('the', '<mark>the</mark>')
+                // console.log(paragraph)
+                results_overview[i].innerHTML = paragraph;
+            }
+
+
+            console.log( query_terms )
+
+    </script>
+
 
 </body>
 </html>

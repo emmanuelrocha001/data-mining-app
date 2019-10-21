@@ -25,7 +25,8 @@
             <!-- {% block content %} -->
             {% for result in result_data.top_ten %}
                 <div class='result'>
-
+                    <p class='poster_path'>{{ result.poster_path }}</p>
+                    <img src="" class='poster_image'>
                     <h2> {{ result.title }} </h2>
                     <p class='overview'> {{ result.overview }} </p>
                     <h3> tf-idf: {{ result.score }} </h3>
@@ -38,7 +39,8 @@
         </div>
 
     </div>
-
+    <!-- http://image.tmdb.org/t/p/w200/rhIRbceoE9lR4veEXuwCC2wARtG.jpg -->
+    <!-- base url + image size + image url -->
     <div class='link-box'>
             <a class='repo-link' href="https://github.com/emmanuelrocha001/data-mining-app">
                 <i id='github-icon' class="fab fa-github-alt fa-4x"></i>
@@ -54,8 +56,16 @@
             query_terms = '{{ result_data.query_terms }}'.split(' ');
 
             results_overview = document.getElementsByClassName('overview');
+            results_poster_images = document.getElementsByClassName('poster_image');
+            results_poster_paths = document.getElementsByClassName('poster_path');
+
+
             for( i=0; i < results_overview.length; i++) {
+
+                // set path to poster image and remove
                 var paragraph = results_overview[i].innerHTML;
+                results_poster_images[i].src = String( results_poster_paths[i].innerHTML );
+                results_poster_paths[i].innerHTML = '';
 
                 for( var j=0; j < query_terms.length; j++) {
                     if( query_terms[j] != '' ) {

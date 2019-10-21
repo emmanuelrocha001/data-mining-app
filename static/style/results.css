@@ -61,7 +61,10 @@ body {
     color: white;
 }
 
-
+.result img{
+    /* border-radius: 10%; */
+    padding: 20px;
+}
 .result i{
     color: #3498db;
     font-size: 34px;

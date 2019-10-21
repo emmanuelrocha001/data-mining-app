@@ -9,12 +9,12 @@ to_drop = ['adult', 'original_title', 'belongs_to_collection', 'production_count
 data.drop( to_drop, inplace=True, axis=1 )
 
 # drop rows with missing data in overview and title
-data = data.dropna( subset=[ 'overview', 'title' ] )
+data = data.dropna( subset=[ 'overview', 'title', 'poster_path' ] )
 
 # iterate and drop rows with data mismatch for overview data
 # rows_to_process = 50000
 
-# rows_to_process = len( data['overview'] )
+print( len( data['overview'] ) )
 
 # for i in range( rows_to_process ):
 #     if not isinstance ( data.iloc[0][ 'overview' ], str ):

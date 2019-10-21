@@ -287,13 +287,18 @@ def query( q ):
     # append idf
     return_data.update({'idf': rank_utils['inverse_document_frequency']})
     top_ten = []
+    base_url = 'http://image.tmdb.org/t/p/'
+    image_size = 'w200'
     for i in range( list_length ):
+        image_url = base_url + image_size + str( movies_csv.iloc[ int( ranking[i][0] ) ][ 'poster_path' ] )
+        print( image_url )
         top_ten.append({
             'title': movies_csv.iloc[ int( ranking[i][0] ) ][ 'title' ],
             'overview': movies_csv.iloc[ int( ranking[i][0] ) ][ 'overview' ],
             'tf': rank_utils['term_frequencies'][ ranking[i][0]],
             'tf_idf': rank_utils['tf_idf'][ ranking[i][0]],
-            'score': ranking[i][1]
+            'score': ranking[i][1],
+            'poster_path': image_url
         })
         # add each titles calculation data
     return_data.update({

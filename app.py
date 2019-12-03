@@ -1,6 +1,6 @@
 from flask import Flask, render_template, url_for, request
-from search_engine import *
-
+from search_engine  import *
+from classifier import *
 
 app = Flask( __name__ )
 @app.route('/')
@@ -20,7 +20,23 @@ def search( q ):
     return render_template( 'results.html', result_data = result)
 
 
-# # for development
+@app.route( '/classifier/' )
+def classifier():
+    return render_template( 'classifier.html')
+
+
+@app.route('/classifier/results/<q>')
+def classify( q ):
+
+    result = predictGenre( q )
+
+    return render_template( 'classifier-results.html', result_data = result)
+
+
+
+
+
+# for development
 if __name__ == '__main__':
     # app.jinja_env.auto_reload = True
     # app.config['TEMPLATES_AUTO_RELOAD'] = True

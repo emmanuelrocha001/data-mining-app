@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="/style/style.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='style/classifier-results.css' ) }}">
+
+
+</head>
+<body>
+
+    <title>Plot Classifier</title>
+    <div id='title-holder' >
+        <h1>Classification Results</h1>
+    </div>
+
+    <div id='classifier-results'>
+        <p> showing results for: </p>
+        <p> "{{ result_data['text'] }}" </p>
+
+    </div>
+
+    <div class='results'>
+        <p style="padding-left: 200px;"> Predicted Genre: <b> {{ result_data['results'][0]['genre'] }} </b> <p>
+        <div class='cen'>
+            {% for result in result_data['results'] %}
+                <p>{{ result['genre'] }} ( score: {{ result['score']}} )
+
+                    <span style="float:right;">
+                        {{ result['percentage'] }}%
+                    </span>
+                </p>
+                <div class="w3-light-grey", style="background: lightgrey;">
+                    <div class="percentage" style="height:24px;width:25%; background:pink;"></div>
+                </div>
+            {% endfor %}
+
+        </div>
+
+        <div class="results">
+                <p style="padding-left: 200px"> <b>Calculation</b></p>
+                <p style="padding-left: 200px"> <b>Score:</b> Sum of all LOG( P( TERM | {{ result_data['results'][0]['genre'] }}) )<p>
+
+
+            <div class='cen'>
+                <table>
+                    <tr>
+                        <!-- {% for term in result_data['calculation']['terms'].keys() %}
+                            <th>{{ result_data['calculation']['terms'][term]['tf_in_genre']}}</th>
+                        {% endfor %} -->
+                        <th>Term</th>
+                        <th>Tf-In-Genre</th>
+                        <th>Total-Terms-In-Genre</th>
+                        <th>P( Term | {{ result_data['results'][0]['genre'] }}) </th>
+                        <th>| Vocabulary |</th>
+                        <th>LOG( P( Term | {{ result_data['results'][0]['genre'] }} ) </th>
+                    </tr>
+                    {% for term in result_data['calculation']['terms'].keys() %}
+                        <tr>
+                            <th> {{ term }} </th>
+                            {% for item in result_data['calculation']['terms'][term].values() %}
+                                <th> {{ item }} </th>
+                            {% endfor %}
+
+
+                        </tr>
+                    {% endfor %}
+
+                </table>
+
+            </div>
+
+        </div>
+
+        <script>
+                var perc = "25%;";
+                // console.log( document.getElementById("percentage-box").style.width );
+                percentage_boxes = document.getElementsByClassName("percentage");
+                console.log( percentage_boxes.length );
+                // results_data = '{{ result_data.results[0].percentage }}'
+                // console.log( results_data)
+                for( i=0; i < percentage_boxes.length; i++) {
+                    var raw_percentage;
+                    var fixed_percentage;
+
+                    switch(i) {
+                        case 0:
+                            // code block
+                            raw_percentage = '{{ result_data.results[0].percentage }}';
+                            fixed_percentage = raw_percentage.toString() + '%';
+                            percentage_boxes[i].style.width = fixed_percentage;
+                            break;
+                        case 1:
+                            // code block
+                            raw_percentage = '{{ result_data.results[1].percentage }}';
+                            fixed_percentage = raw_percentage.toString() + '%';
+                            percentage_boxes[i].style.width = fixed_percentage;
+                            break;
+
+                        case 2:
+                            // code block
+                            raw_percentage = '{{ result_data.results[2].percentage }}';
+                            fixed_percentage = raw_percentage.toString() + '%';
+                            percentage_boxes[i].style.width = fixed_percentage;
+                            break;
+
+                        case 3:
+                            // code block
+                            raw_percentage = '{{ result_data.results[3].percentage }}';
+                            fixed_percentage = raw_percentage.toString() + '%';
+                            percentage_boxes[i].style.width = fixed_percentage;
+                            break;
+
+                        case 4:
+                            // code block
+                            raw_percentage = '{{ result_data.results[4].percentage }}';
+                            fixed_percentage = raw_percentage.toString() + '%';
+                            percentage_boxes[i].style.width = fixed_percentage;
+                            break;
+
+                        case 5:
+                            // code block
+                            raw_percentage = '{{ result_data.results[5].percentage }}';
+                            fixed_percentage = raw_percentage.toString() + '%';
+                            percentage_boxes[i].style.width = fixed_percentage;
+                            break;
+
+                        case 6:
+                            // code block
+                            raw_percentage = '{{ result_data.results[6].percentage }}';
+                            fixed_percentage = raw_percentage.toString() + '%';
+                            percentage_boxes[i].style.width = fixed_percentage;
+                            break;
+
+                        case 7:
+                            // code block
+                            raw_percentage = '{{ result_data.results[7].percentage }}';
+                            fixed_percentage = raw_percentage.toString() + '%';
+                            percentage_boxes[i].style.width = fixed_percentage;
+                            break;
+
+                        case 8:
+                            // code block
+                            raw_percentage = '{{ result_data.results[8].percentage }}';
+                            fixed_percentage = raw_percentage.toString() + '%';
+                            percentage_boxes[i].style.width = fixed_percentage;
+                            break;
+
+                        case 9:
+                            // code block
+                            raw_percentage = '{{ result_data.results[9].percentage }}';
+                            fixed_percentage = raw_percentage.toString() + '%';
+                            percentage_boxes[i].style.width = fixed_percentage;
+                            break;
+
+                        case 10:
+                            // code block
+                            raw_percentage = '{{ result_data.results[10].percentage }}';
+                            fixed_percentage = raw_percentage.toString() + '%';
+                            percentage_boxes[i].style.width = fixed_percentage;
+                            break;
+
+                        case 11:
+                            // code block
+                            raw_percentage = '{{ result_data.results[11].percentage }}';
+                            fixed_percentage = raw_percentage.toString() + '%';
+                            percentage_boxes[i].style.width = fixed_percentage;
+                            break;
+
+                        case 12:
+                            // code block
+                            raw_percentage = '{{ result_data.results[12].percentage }}';
+                            fixed_percentage = raw_percentage.toString() + '%';
+                            percentage_boxes[i].style.width = fixed_percentage;
+                            break;
+
+                        case 13:
+                            // code block
+                            raw_percentage = '{{ result_data.results[13].percentage }}';
+                            fixed_percentage = raw_percentage.toString() + '%';
+                            percentage_boxes[i].style.width = fixed_percentage;
+                            break;
+
+                        case 14:
+                            // code block
+                            raw_percentage = '{{ result_data.results[14].percentage }}';
+                            fixed_percentage = raw_percentage.toString() + '%';
+                            percentage_boxes[i].style.width = fixed_percentage;
+                            break;
+
+                        case 15:
+                            // code block
+                            raw_percentage = '{{ result_data.results[15].percentage }}';
+                            fixed_percentage = raw_percentage.toString() + '%';
+                            percentage_boxes[i].style.width = fixed_percentage;
+                            break;
+
+                        case 16:
+                            // code block
+                            raw_percentage = '{{ result_data.results[16].percentage }}';
+                            fixed_percentage = raw_percentage.toString() + '%';
+                            percentage_boxes[i].style.width = fixed_percentage;
+                            break;
+
+                        case 17:
+                            // code block
+                            raw_percentage = '{{ result_data.results[17].percentage }}';
+                            fixed_percentage = raw_percentage.toString() + '%';
+                            percentage_boxes[i].style.width = fixed_percentage;
+                            break;
+
+                        case 18:
+                            // code block
+                            raw_percentage = '{{ result_data.results[18].percentage }}';
+                            fixed_percentage = raw_percentage.toString() + '%';
+                            percentage_boxes[i].style.width = fixed_percentage;
+                            break;
+
+                        case 19:
+                            // code block
+                            raw_percentage = '{{ result_data.results[19].percentage }}';
+                            fixed_percentage = raw_percentage.toString() + '%';
+                            percentage_boxes[i].style.width = fixed_percentage;
+                            break;
+
+                        default:
+                            // code block
+                    }
+
+
+
+                }
+        </script>
+
+    </div>
+
+    <!-- http://image.tmdb.org/t/p/w200/rhIRbceoE9lR4veEXuwCC2wARtG.jpg -->
+    <!-- base url + image size + image url -->
+    <div class='link-box'>
+            <a class='repo-link' href="https://github.com/emmanuelrocha001/data-mining-app">
+                <i id='github-icon' class="fab fa-github-alt fa-4x"></i>
+            </a>
+            <div class='author-text'>
+                    <p> Developed by Emmanuel Rocha</p>
+            </div>
+    </div>
+
+    <script type=text/javascript src="{{ url_for('static', filename='js/font-awesome.js') }}"></script>
+    <script type=text/javascript src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+    <script>
+            query_terms = '{{ result_data.query_terms }}'.split(' ');
+
+            results_overview = document.getElementsByClassName('overview');
+            results_poster_images = document.getElementsByClassName('poster_image');
+            results_poster_paths = document.getElementsByClassName('poster_path');
+
+
+            for( i=0; i < results_overview.length; i++) {
+
+                // set path to poster image and remove
+                var paragraph = results_overview[i].innerHTML;
+                results_poster_images[i].src = String( results_poster_paths[i].innerHTML );
+                results_poster_paths[i].innerHTML = '';
+
+                for( var j=0; j < query_terms.length; j++) {
+                    if( query_terms[j] != '' ) {
+                        var regEx = new RegExp(query_terms[j], "ig");
+                        // var replaceMask = '<mark>' + query_terms[j] + '</mark>';
+
+                        paragraph = paragraph.replace(regEx, ( match) => {
+                            return '<mark>' + match + '</mark>'
+                        });
+                    }
+                }
+
+                // paragraph = paragraph.replace('the', '<mark>the</mark>')
+                // console.log(paragraph)
+                results_overview[i].innerHTML = paragraph;
+            }
+
+
+            console.log( query_terms )
+
+    </script>
+
+
+
+</body>
+</html>

@@ -32,23 +32,22 @@
                     <h2>Document ranking calculations</h2>
                     <table>
                         <tr>
-                          <th></th>
-                          {% for term in result.tf.keys() %}
-                          <th>{{ term }}</th>
-                          {% endfor %}
+                            <th></th>
+                            {% for term in result.tf.keys() %}
+                            <th>{{ term }}</th>
+                            {% endfor %}
                         </tr>
                         <tr>
-                          <th>tf</th>
-                          {% for val in result.tf.values() %}
-                          <th>{{ val }}</th>
-                          {% endfor %}
+                            <th>tf</th>
+                            {% for val in result.tf.values() %}
+                            <th>{{ val }}</th>
+                            {% endfor %}
                         </tr>
                         <tr>
                             <th>idf</th>
                             {% for term in result.tf.keys() %}
                             <th> {{ result_data.idf[ term ] }} </th>
                             {% endfor %}
-
                         </tr>
 
                         <tr>

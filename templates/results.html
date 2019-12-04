@@ -12,7 +12,8 @@
 
 
 </head>
-<body>
+
+<body onload="getWidth();">
 
     <title>Movie Search</title>
     <div class='cen',style="color:white; margin-top: 20px">
@@ -31,18 +32,20 @@
 
             </script>
 
-            <div id='title-holder' >
-                <h1 style="padding: 0; margin: 0;">Top Results</h1>
-            </div>
 
     </div>
-    <div class='results'>
+    <div id='result-container', class='results'>
+        <div id='title-holder' >
+                    <h1 style="padding: 0; margin: 0;">Top Results</h1>
+        </div>
         <p id='query-results'> total documents: {{ result_data.documents }} <br> {{ result_data.results }} results ( {{ result_data.time }} seconds )<p>
         <div class='cen'>
 
             <!-- {% block content %} -->
             {% for result in result_data.top_ten %}
+
                 <div class='result'>
+
                     <p class='poster_path'>{{ result.poster_path }}</p>
                     <img src="" class='poster_image'>
                     <h2> {{ result.title }} </h2>
@@ -85,18 +88,17 @@
 
 
         </div>
-
+        <div class='link-box'>
+                <a class='repo-link' href="https://github.com/emmanuelrocha001/data-mining-app">
+                    <i id='github-icon' class="fab fa-github-alt fa-4x"></i>
+                </a>
+                <div class='author-text'>
+                        <p> Developed by Emmanuel Rocha</p>
+                </div>
+        </div>
     </div>
     <!-- http://image.tmdb.org/t/p/w200/rhIRbceoE9lR4veEXuwCC2wARtG.jpg -->
     <!-- base url + image size + image url -->
-    <div class='link-box'>
-            <a class='repo-link' href="https://github.com/emmanuelrocha001/data-mining-app">
-                <i id='github-icon' class="fab fa-github-alt fa-4x"></i>
-            </a>
-            <div class='author-text'>
-                    <p> Developed by Emmanuel Rocha</p>
-            </div>
-    </div>
 
     <script type=text/javascript src="{{ url_for('static', filename='js/font-awesome.js') }}"></script>
     <script type=text/javascript src="{{ url_for('static', filename='js/jquery.js') }}"></script>
@@ -133,9 +135,25 @@
 
 
             console.log( query_terms )
+        </script>
+
+        <script>
+            function getWidth() {
+
+            desired_size = document.getElementsByClassName( 'result' )[0].scrollWidth;
+            console.log( desired_size )
+
+
+            var pixel = desired_size.toString() + 'px';
+
+            document.getElementById('result-container').style.width = pixel;
+            console.log( document.getElementById('result-container').style.width )
+
+            $viewport.scrollLeft((imageWidth - viewportWidth) / 2);
+            // console.log("hello")
+            }
 
     </script>
-
-
 </body>
+
 </html>

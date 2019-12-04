@@ -80,8 +80,8 @@
                         <th>Term</th>
                         <th>Tf-In-Genre</th>
                         <th>Total-Terms-In-Genre</th>
-                        <th>P( Term | {{ result_data['results'][0]['genre'] }}) </th>
                         <th>| Vocabulary |</th>
+                        <th>P( Term | {{ result_data['results'][0]['genre'] }}) </th>
                         <th>LOG( P( Term | {{ result_data['results'][0]['genre'] }} ) </th>
                     </tr>
                     {% for term in result_data['calculation']['terms'].keys() %}

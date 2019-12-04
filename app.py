@@ -4,7 +4,6 @@ from classifier import *
 
 app = Flask( __name__ )
 @app.route('/')
-@app.route('/search/')
 def main():
     # test = query('war machines')
     # print(test)
@@ -12,7 +11,7 @@ def main():
     return render_template( 'index.html')
     # print( request.form['search-box'] )
 
-@app.route('/results/<q>')
+@app.route('/search/results/<q>')
 def search( q ):
 
     result = query( q )

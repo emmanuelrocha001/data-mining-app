@@ -21,9 +21,20 @@
 
         <div class="search-box">
             <input class="search-txt" type="text" name="" id='search-text' placeholder="Search">
+
+
+            <a class="search-btn" id='captioner-button' href=''>
+                <i class="fas fa-camera"></i>
+            </a>
+
+            <a class="search-btn" id='classify-button' href=''>
+                <i class="fas fa-chart-pie"></i>
+            </a>
+
             <a class="search-btn" id='search-button' href=''>
                 <i class="fas fa-search fa"></i>
             </a>
+
 
         </div>
 
@@ -42,10 +53,23 @@
     <script type=text/javascript src="{{ url_for('static', filename='js/font-awesome.js') }}"></script>
 
     <script>
+
+        document.getElementById('captioner-button').addEventListener("click", ( event ) => {
+            console.log('clicked')
+            var search = document.getElementById("search-text").value;
+            document.getElementById('captioner-button').href = String( '/captioner/results/' + search);
+        });
+
+        document.getElementById("classify-button").addEventListener("click", ( event ) => {
+            console.log('clicked')
+            var search = document.getElementById("search-text").value;
+            document.getElementById('classify-button').href = String( '/classifier/results/' + search);
+        });
+
         document.getElementById("search-button").addEventListener("click", ( event ) => {
             console.log('clicked')
             var search = document.getElementById("search-text").value;
-            document.getElementById('search-button').href = String( '/results/' + search);
+            document.getElementById('search-button').href = String( '/search/results/' + search);
         });
 
 

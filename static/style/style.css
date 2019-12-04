@@ -52,7 +52,6 @@ h1 {
     justify-content: center;
     align-items: center;
     transition: .4s;
-
 }
 
 .link-box {
@@ -97,6 +96,8 @@ h1 {
 .search-btn{
     background: gray;
     color: white;
+    /* scroll-padding-right: 10px; */
+    margin-right: 10px;
 
 }
 

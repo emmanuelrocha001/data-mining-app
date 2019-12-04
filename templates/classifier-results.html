@@ -15,19 +15,43 @@
 <body>
 
     <title>Plot Classifier</title>
-    <div id='title-holder' >
-        <h1>Classification Results</h1>
+
+    <div class='cen',style="color:white; margin-top: 20px">
+
+        <a class="search-btn" id='home-button' href=''>
+            <i style="color: white; height: 30px; width: 30px; float: right;" class="fas fa-home"></i>
+        </a>
+
+        <script>
+
+            document.getElementById("home-button").addEventListener("click", ( event ) => {
+            console.log('clicked')
+            document.getElementById('home-button').href = String( '/');
+            });
+
+
+        </script>
+
+        <div id='title-holder' >
+            <h1 style="padding: 0; margin: 0;">Classification Results</h1>
+        </div>
+
     </div>
 
+
+
     <div id='classifier-results'>
-        <p> showing results for: </p>
-        <p> "{{ result_data['text'] }}" </p>
+        <div style="margin-bottom: 30px;" class='cen'>
+            <p style="font-size: 20px"> <b> showing results for: </b> </p>
+            <p> "{{ result_data['text'] }}" </p>
+        </div>
 
     </div>
 
     <div class='results'>
-        <p style="padding-left: 200px;"> Predicted Genre: <b> {{ result_data['results'][0]['genre'] }} </b> <p>
         <div class='cen'>
+            <p style="padding-bottom: 15px; font-size: 20px;"> Predicted Genre: <b> {{ result_data['results'][0]['genre'] }} </b> <p>
+
             {% for result in result_data['results'] %}
                 <p>{{ result['genre'] }} ( score: {{ result['score']}} )
 
@@ -36,18 +60,18 @@
                     </span>
                 </p>
                 <div class="w3-light-grey", style="background: lightgrey;">
-                    <div class="percentage" style="height:24px;width:25%; background:pink;"></div>
+    <div class="percentage" style="height:24px;width:25%; background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);"></div>
                 </div>
             {% endfor %}
 
         </div>
 
         <div class="results">
-                <p style="padding-left: 200px"> <b>Calculation</b></p>
-                <p style="padding-left: 200px"> <b>Score:</b> Sum of all LOG( P( TERM | {{ result_data['results'][0]['genre'] }}) )<p>
 
 
             <div class='cen'>
+                <p style="padding-bottom: 15px; font-size: 20px;"> <b>Calculation</b></p>
+                <p style="padding-bottom: 15px; font-size: 20px;"> <b>Score:</b> Sum of all LOG( P( TERM | {{ result_data['results'][0]['genre'] }}) )<p>
                 <table>
                     <tr>
                         <!-- {% for term in result_data['calculation']['terms'].keys() %}

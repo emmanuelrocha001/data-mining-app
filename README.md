@@ -16,7 +16,7 @@ http://emmanuelrocha001.pythonanywhere.com/
 ## How to run locally:
 python app.py <br/> <br/>
 runs on localhost:5000
-
+ 
 
 ## Dataset pre-processing
 ### Tokenization
@@ -25,7 +25,12 @@ runs on localhost:5000
   __[3]:__ filter out stop-words <br/>
 
 ### Posting Lists
- dataset tokens are processed and a json file is generated with the following data format: <br/>
+
+dataset tokens are processed and a json file is generated( example entry below )<br/>
+| term | frequency | posting list | 
+| --- | --- | --- |
+| led | 484 | \[ 0, 218, 443, 673, 904...\] | 
+
 
 ## Document Ranking
 

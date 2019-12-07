@@ -1,21 +1,21 @@
 # Movie Search Engine
 
 
-free form search on a dataset of 44,506 documents( search is done on plot overviews )
+free form search on plot overviews
 ## Dataset:
 https://www.kaggle.com/rounakbanik/the-movies-dataset
 
 
 ## Dependencies:
-csv, nltk, numpy, json, flask, pandas
-(requires Python 3.7 )
+csv, nltk, numpy, json, flask, pandas <br/>
+Python 3.7
 
-## search url
-http://emmanuelrocha001.pythonanywhere.com/search/
+## app url
+http://emmanuelrocha001.pythonanywhere.com/
 
 ## How to run locally:
 python app.py <br/> <br/>
-( runs on localhost:5000 or localhost:5000/search )
+runs on localhost:5000
 
 
 ## Dataset pre-processing
@@ -26,14 +26,6 @@ python app.py <br/> <br/>
 
 ### Posting Lists
  dataset tokens are processed and a json file is generated with the following data format: <br/>
- { <br/>
-    "tokens" : [  <br/>
-          document_id : {
-          
-          }
-     
-    ]
- }
 
 ## Document Ranking
 

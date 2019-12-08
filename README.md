@@ -54,7 +54,8 @@ The size of the dataset, around 40k documents, was considerably larger than anyt
 __tf-idf__<br/>
 https://en.wikipedia.org/wiki/Tf%E2%80%93idf
 
-# Plot Classifier
+# Classifier
+genre classification on provided text
 ## Dataset pre-processing
 ### Tokenization
   __[1]:__ change casing to lowercase <br/>

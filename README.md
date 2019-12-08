@@ -54,7 +54,7 @@ __tf-idf__<br/>
 https://en.wikipedia.org/wiki/Tf%E2%80%93idf
 
 # Classifier
-genre classification on provided text
+Text classifier was implemented using Naive Bayes Algorithm to classify a genre based on plot description. The classifier is trained using the [dataset](#dataset) linked above
 ## Dataset pre-processing
 
 Feature lists are processed from the csv file. The Feature lists along with the Posting lists are use to generate the json file containing the pre-processed data require for classification calculations. Data format is shown below.<br/>

@@ -83,3 +83,33 @@ __genres__: a list of genres and corresponding frequencies in which the term app
 | term  | frequencies       |  
 | :---         |     :---:      |        
 | woody          | {"Animation": 6, "Adventure": 0, "Romance": 0, "Comedy": 11...}       | 
+
+## Naive Bayes Classifier
+### Bayes Theorem
+<a href="https://www.codecogs.com/eqnedit.php?latex=P(A|B)&space;=&space;\frac{P(B|A)*P(A)}{P(B)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(A|B)&space;=&space;\frac{P(B|A)*P(A)}{P(B)}" title="P(A|B) = \frac{P(B|A)*P(A)}{P(B)}" /></a>
+<br/><br/>The equation can be written as:<br/><br/>
+<a href="https://www.codecogs.com/eqnedit.php?latex=Posterior&space;=&space;\frac{prior*likelyhood}{evidence}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Posterior&space;=&space;\frac{prior*likelyhood}{evidence}" title="Posterior = \frac{prior*likelyhood}{evidence}" /></a>
+
+### Probability of a genre
+<a href="https://www.codecogs.com/eqnedit.php?latex=P(Animation)&space;=&space;\frac{number\&space;of\&space;documents\&space;that\&space;are\&space;categorized\&space;as\&space;Animation}{number\&space;of\&space;total\&space;documents}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(Animation)&space;=&space;\frac{number\&space;of\&space;documents\&space;that\&space;are\&space;categorized\&space;as\&space;Animation}{number\&space;of\&space;total\&space;documents}" title="P(Animation) = \frac{number\ of\ documents\ that\ are\ categorized\ as\ Animation}{number\ of\ total\ documents}" /></a>
+### Probability a word being in a genre
+<a href="https://www.codecogs.com/eqnedit.php?latex=n_k&space;=&space;Number\&space;of\&space;times\&space;a\&space;word\&space;appears\&space;in\&space;the\&space;given\&space;genre" target="_blank"><img src="https://latex.codecogs.com/gif.latex?n_k&space;=&space;Number\&space;of\&space;times\&space;a\&space;word\&space;appears\&space;in\&space;the\&space;given\&space;genre" title="n_k = Number\ of\ times\ a\ word\ appears\ in\ the\ given\ genre" /></a>
+<br/>
+<br/>
+in the event the term does not appear in the given genre, Laplace smoothing is used to avoid 0 probability
+<br/>
+<br/>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=Laplace\&space;Smoothing&space;=&space;1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Laplace\&space;Smoothing&space;=&space;1" title="Laplace\ Smoothing = 1" /></a>
+
+<br/>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=n&space;=\&space;total\&space;number\&space;of\&space;terms\&space;in\&space;the\&space;given\&space;genre" target="_blank"><img src="https://latex.codecogs.com/gif.latex?n&space;=\&space;total\&space;number\&space;of\&space;terms\&space;in\&space;the\&space;given\&space;genre" title="n =\ total\ number\ of\ terms\ in\ the\ given\ genre" /></a>
+
+<br/>
+<a href="https://www.codecogs.com/eqnedit.php?latex=|&space;Vocabulary|&space;=&space;\&space;number\&space;of\&space;unique\&space;terms\&space;in\&space;the\&space;dataset" target="_blank"><img src="https://latex.codecogs.com/gif.latex?|&space;Vocabulary|&space;=&space;\&space;number\&space;of\&space;unique\&space;terms\&space;in\&space;the\&space;dataset" title="| Vocabulary| = \ number\ of\ unique\ terms\ in\ the\ dataset" /></a>
+
+<br/>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=P(\&space;Word_{k}\&space;|\&space;Genre)&space;=&space;\frac{&space;n_{k}&space;&plus;&space;Laplace\&space;Smoothing}{&space;n&space;&plus;&space;|\&space;Vocabulary\&space;|}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\&space;Word_{k}\&space;|\&space;Genre)&space;=&space;\frac{&space;n_{k}&space;&plus;&space;Laplace\&space;Smoothing}{&space;n&space;&plus;&space;|\&space;Vocabulary\&space;|}" title="P(\ Word_{k}\ |\ Genre) = \frac{ n_{k} + Laplace\ Smoothing}{ n + |\ Vocabulary\ |}" /></a>
+### Probability of a document being classified as a genre

@@ -26,8 +26,11 @@ runs on localhost:5000
 
 ### Posting Lists
 
-dataset tokens are processed and a json file is generated with the following data( example entry below )<br/>
-
+dataset tokens are processed and a json file is generated with the following data<br/><br/>
+__term__: unique word in the dataset<br/>
+__frequency__: number of times the term appears in the dataset<br/>
+__posting list__: documents in which the word appears<br/><br/>
+__example__
 
 | term         | frequency      |  posting list |
 | :---         |     :---:      |          ---: |

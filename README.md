@@ -30,7 +30,6 @@ dataset tokens are processed and a json file is generated with the following dat
 __term__: unique term in the dataset<br/>
 __frequency__: number of times the term appears in the dataset<br/>
 __posting list__: documents in which the term appears<br/><br/>
-__example__
 
 | term         | frequency      |  posting list |
 | :---         |     :---:      |          ---: |
@@ -57,10 +56,8 @@ https://en.wikipedia.org/wiki/Tf%E2%80%93idf
 # Classifier
 genre classification on provided text
 ## Dataset pre-processing
-### Tokenization
-  __[1]:__ change casing to lowercase <br/>
-  __[2]:__ remove punctuation <br/>
-  __[3]:__ filter out stop-words <br/>
+
+Feature lists are processed from the csv file. The Feature lists along with the Posting lists are use to generate the json file containing the pre-processed data require for classification calculations. Data format is shown below.<br/>
 
 ### Feature Lists
 __document id__: document index<br/>

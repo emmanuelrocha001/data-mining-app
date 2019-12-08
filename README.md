@@ -72,12 +72,16 @@ __genre__: pre-assigned genre<br/><br/>
 | 0          | { "led": 1, "Buzz": 2, "Woody": 3 }        | Animation  |
 
 ### Genres pre-processed data
+__vocabulary size__: number of unique terms in the dataset<br/>
+__genres__: a list of unique genres, and both the total terms in genre and probability<br/><br/>
 
 | vocabulary size  | genres       |  
 | :---         |     :---:      |        
 | 73943          | { "Animation": { "total_term_in_genre": 1120 , "probability": 0.026566095021229155 }, ... }        | 
 
 ### Terms pre-processed data
+__term__: term in vocabulary<br/>
+__genres__: a list of genres and corresponding frequencies in which the term appears in<br/><br/>
 
 | term  | frequencies       |  
 | :---         |     :---:      |        

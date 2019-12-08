@@ -63,7 +63,22 @@ genre classification on provided text
   __[3]:__ filter out stop-words <br/>
 
 ### Feature Lists
+__document id__: document index<br/>
+__terms__: a list of terms and their corresponding frequencies in the current document<br/>
+__genre__: pre-assigned genre<br/><br/>
 
+| Document id  | terms      |  genre |
+| :---         |     :---:      |          ---: |
+| 0          | { "led": 1, "Buzz": 2, "Woody": 3 }        | Animation  |
 
+### Genres pre-processed data
 
+| vocabulary size  | genres       |  
+| :---         |     :---:      |        
+| 73943          | { "Animation": { "total_term_in_genre": 1120 , "probability": 0.026566095021229155 }, ... }        | 
 
+### Terms pre-processed data
+
+| term  | frequencies       |  
+| :---         |     :---:      |        
+| woody          | {"Animation": 6, "Adventure": 0, "Romance": 0, "Comedy": 11...}       | 

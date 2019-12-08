@@ -90,6 +90,7 @@ __genres__: a list of genres and corresponding frequencies in which the term app
 <br/><br/>The equation can be written as:<br/><br/>
 <a href="https://www.codecogs.com/eqnedit.php?latex=Posterior&space;=&space;\frac{prior*likelyhood}{evidence}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Posterior&space;=&space;\frac{prior*likelyhood}{evidence}" title="Posterior = \frac{prior*likelyhood}{evidence}" /></a>
 
+### Calculations
 ### Probability of a genre
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(Animation)&space;=&space;\frac{number\&space;of\&space;documents\&space;that\&space;are\&space;categorized\&space;as\&space;Animation}{number\&space;of\&space;total\&space;documents}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(Animation)&space;=&space;\frac{number\&space;of\&space;documents\&space;that\&space;are\&space;categorized\&space;as\&space;Animation}{number\&space;of\&space;total\&space;documents}" title="P(Animation) = \frac{number\ of\ documents\ that\ are\ categorized\ as\ Animation}{number\ of\ total\ documents}" /></a>
 ### Probability a word being in a genre
@@ -114,3 +115,8 @@ in the event the term does not appear in the given genre, Laplace smoothing is u
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(\&space;Word_{k}\&space;|\&space;Genre)&space;=&space;\frac{&space;n_{k}&space;&plus;&space;Laplace\&space;Smoothing}{&space;n&space;&plus;&space;|\&space;Vocabulary\&space;|}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\&space;Word_{k}\&space;|\&space;Genre)&space;=&space;\frac{&space;n_{k}&space;&plus;&space;Laplace\&space;Smoothing}{&space;n&space;&plus;&space;|\&space;Vocabulary\&space;|}" title="P(\ Word_{k}\ |\ Genre) = \frac{ n_{k} + Laplace\ Smoothing}{ n + |\ Vocabulary\ |}" /></a>
 ### Probability of a document being classified as a genre
+<a href="https://www.codecogs.com/eqnedit.php?latex=score&space;=&space;\&space;P(Genre)\&space;\prod_{w\epsilon&space;words}&space;P(Word_k\&space;|\&space;Genre)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?score&space;=&space;\&space;P(Genre)\&space;\prod_{w\epsilon&space;words}&space;P(Word_k\&space;|\&space;Genre)" title="score = \ P(Genre)\ \prod_{w\epsilon words} P(Word_k\ |\ Genre)" /></a>
+### Predicted Genre 
+<a href="https://www.codecogs.com/eqnedit.php?latex=Genre_{predicted}&space;=&space;\arg\max_{G_i\epsilon&space;G}(\&space;P(G_i)\&space;\prod_{w\epsilon&space;words}&space;P(Word_k\&space;|\&space;G_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Genre_{predicted}&space;=&space;\arg\max_{G_i\epsilon&space;G}(\&space;P(G_i)\&space;\prod_{w\epsilon&space;words}&space;P(Word_k\&space;|\&space;G_i)" title="Genre_{predicted} = \arg\max_{G_i\epsilon G}(\ P(G_i)\ \prod_{w\epsilon words} P(Word_k\ |\ G_i)" /></a>
+<br/>
+

@@ -27,10 +27,11 @@ runs on localhost:5000
 ### Posting Lists
 
 dataset tokens are processed and a json file is generated with the following data( example entry below )<br/>
-| term | frequency | posting list |
-| --- | --- | --- |
-| led | 484  | \[0, 218, 372, 443...\] |
 
+
+| term         | frequency      |  posting list |
+| :---         |     :---:      |          ---: |
+| led          | 484            | \[0, 218, 372, 443...\]  |
 
 ## Document Ranking
 

@@ -107,6 +107,7 @@ in the event the term does not appear in the given genre, Laplace smoothing is u
 <a href="https://www.codecogs.com/eqnedit.php?latex=n&space;=\&space;total\&space;number\&space;of\&space;terms\&space;in\&space;the\&space;given\&space;genre" target="_blank"><img src="https://latex.codecogs.com/gif.latex?n&space;=\&space;total\&space;number\&space;of\&space;terms\&space;in\&space;the\&space;given\&space;genre" title="n =\ total\ number\ of\ terms\ in\ the\ given\ genre" /></a>
 
 <br/>
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=|&space;Vocabulary|&space;=&space;\&space;number\&space;of\&space;unique\&space;terms\&space;in\&space;the\&space;dataset" target="_blank"><img src="https://latex.codecogs.com/gif.latex?|&space;Vocabulary|&space;=&space;\&space;number\&space;of\&space;unique\&space;terms\&space;in\&space;the\&space;dataset" title="| Vocabulary| = \ number\ of\ unique\ terms\ in\ the\ dataset" /></a>
 
 <br/>

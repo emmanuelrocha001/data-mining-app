@@ -54,7 +54,7 @@ __tf-idf__<br/>
 https://en.wikipedia.org/wiki/Tf%E2%80%93idf
 
 # Classifier
-Text classifier was implemented using Naive Bayes Algorithm to classify a genre based on plot description. The classifier is trained using the [dataset](#dataset) linked above
+Text classifier was implemented using Naive Bayes Algorithm to classify a genre based on plot description. The classifier is trained using the [dataset](#dataset) linked above, using both the genre field and plot overview field.
 ## Dataset pre-processing
 
 Feature lists are processed from the csv file. The Feature lists along with the Posting lists are use to generate the json file containing the pre-processed data require for classification calculations. Data format is shown below.<br/>
@@ -119,4 +119,5 @@ in the event the term does not appear in the given genre, Laplace smoothing is u
 ### Predicted Genre 
 <a href="https://www.codecogs.com/eqnedit.php?latex=Genre_{predicted}&space;=&space;\arg\max_{G_i\epsilon&space;G}(\&space;P(G_i)\&space;\prod_{w\epsilon&space;words}&space;P(Word_k\&space;|\&space;G_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Genre_{predicted}&space;=&space;\arg\max_{G_i\epsilon&space;G}(\&space;P(G_i)\&space;\prod_{w\epsilon&space;words}&space;P(Word_k\&space;|\&space;G_i)" title="Genre_{predicted} = \arg\max_{G_i\epsilon G}(\ P(G_i)\ \prod_{w\epsilon words} P(Word_k\ |\ G_i)" /></a>
 <br/>
-
+### Challanges
+The most challening aspect of implementing the Naive Bayes classifier was the uneven number of entries per genre in the dataset. Given the abundant number of movies classified as Comedy or Drama, the prediction tends to be skewed towards those categories. In addition, the genres field contained multiple entries. The entry that was picked was one that lessed the influence the larger genres would have on the final result.    
